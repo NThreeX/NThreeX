@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[my new post]]></title>
-      <url>http://yoursite.com/2016/06/03/my-new-post/</url>
+      <url>nthreex.github.io/2016/06/03/my-new-post/</url>
       <content type="html"><![CDATA[<p>#这是我的第一篇文章</p>
 <p> 写些什么好呢</p>
 <p> 不让就作诗一首吧<br><a id="more"></a><br> 床前明月光<br> 疑是地上霜<br> 举头望明月<br> 低头思故乡</p>
@@ -32,7 +32,7 @@
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://yoursite.com/2016/06/03/hello-world/</url>
+      <url>nthreex.github.io/2016/06/03/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -58,7 +58,7 @@
     
     <entry>
       <title><![CDATA[about me]]></title>
-      <url>http://yoursite.com/about/index.html</url>
+      <url>nthreex.github.io/about/index.html</url>
       <content type="html"></content>
     </entry>
     

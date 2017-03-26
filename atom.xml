@@ -4,9 +4,9 @@
   <subtitle>I am a subtitle</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="nthreex.github.io/"/>
   <updated>2017-03-26T03:22:00.369Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>nthreex.github.io/</id>
   
   <author>
     <name>nthreex</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>my new post</title>
-    <link href="http://yoursite.com/2016/06/03/my-new-post/"/>
-    <id>http://yoursite.com/2016/06/03/my-new-post/</id>
+    <link href="nthreex.github.io/2016/06/03/my-new-post/"/>
+    <id>nthreex.github.io/2016/06/03/my-new-post/</id>
     <published>2016-06-03T07:05:37.000Z</published>
     <updated>2017-03-26T03:22:00.369Z</updated>
     
@@ -39,17 +39,17 @@
     
     </summary>
     
-      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+      <category term="blog" scheme="nthreex.github.io/categories/blog/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="nthreex.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/06/03/hello-world/"/>
-    <id>http://yoursite.com/2016/06/03/hello-world/</id>
+    <link href="nthreex.github.io/2016/06/03/hello-world/"/>
+    <id>nthreex.github.io/2016/06/03/hello-world/</id>
     <published>2016-06-03T03:19:11.935Z</published>
     <updated>2017-03-26T03:01:12.796Z</updated>
     
@@ -71,7 +71,7 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="nthreex.github.io/tags/hexo/"/>
     
   </entry>
   
