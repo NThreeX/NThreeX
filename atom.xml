@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="nthreex.github.io/"/>
-  <updated>2017-03-29T14:11:25.389Z</updated>
+  <updated>2017-04-01T08:16:31.199Z</updated>
   <id>nthreex.github.io/</id>
   
   <author>
@@ -16,131 +16,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Make a choice</title>
+    <link href="nthreex.github.io/2017/04/01/Make-a-choice/"/>
+    <id>nthreex.github.io/2017/04/01/Make-a-choice/</id>
+    <published>2017-04-01T08:04:42.073Z</published>
+    <updated>2017-04-01T08:16:31.199Z</updated>
+    
+    <content type="html"><![CDATA[<p>虽然之前是老早就决定毕业就出来找工作了</p>
+<p>近来还是有些小纠结…</p>
+<p>若是考研</p>
+<p>辛苦地奋斗上一年</p>
+<p>还是有机会考回省内的吧</p>
+<p>然后又可以愉快的念三年书</p>
+<p>出来的话平台也会高一点</p>
+<p>而选择出来就业</p>
+<p>就没有那么潇洒咯</p>
+<p>且不说学校非名牌</p>
+<p>自身技术又不够扎实</p>
+<p>并不容易找到心仪的工作</p>
+<p>即使找到工作了</p>
+<p>可能辛辛苦苦三年出来</p>
+<p>也没有读研出来要混得好</p>
+<p>那么</p>
+<p>究竟是作何抉择？</p>
+<blockquote>
+<p>找工作吧</p>
+</blockquote>
+<p>与其继续在温室里成长</p>
+<p>不如早点面对风雨</p>
+<p>怎么说来着</p>
+<p>工作几年</p>
+<p>挣点小钱</p>
+<p>去那些憧憬的地方看看</p>
+<p>做点自己感兴趣的事</p>
+<p>然后再好好奋斗</p>
+<p>成家立业</p>
+<p>然后</p>
+<p>…</p>
+<p>再说吧哈哈</p>
+<blockquote>
+<h2 id="热爱生命"><a href="#热爱生命" class="headerlink" title="热爱生命"></a>热爱生命</h2><p>  汪国真 </p>
+<p> 我不去想是否能够成功<br> 既然选择了远方<br> 便只顾风雨兼程<br> 我不去想能否赢得爱情<br> 既然钟情于玫瑰<br> 就勇敢地吐露真诚<br> 我不去想身后会不会袭来寒风冷雨<br> 既然目标是地平线<br> 留给世界的只能是背影<br> 我不去想未来是平坦还是泥泞<br> 只要热爱生命<br> 一切<br>都在意料之中</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽然之前是老早就决定毕业就出来找工作了&lt;/p&gt;
+&lt;p&gt;近来还是有些小纠结…&lt;/p&gt;
+&lt;p&gt;若是考研&lt;/p&gt;
+&lt;p&gt;辛苦地奋斗上一年&lt;/p&gt;
+&lt;p&gt;还是有机会考回省内的吧&lt;/p&gt;
+&lt;p&gt;然后又可以愉快的念三年书&lt;/p&gt;
+&lt;p&gt;出来的话平台也会高一点&lt;/p&gt;
+&lt;p&gt;而选择出来就
+    
+    </summary>
+    
+      <category term="feeling" scheme="nthreex.github.io/categories/feeling/"/>
+    
+    
+      <category term="life" scheme="nthreex.github.io/tags/life/"/>
+    
+      <category term="feeling" scheme="nthreex.github.io/tags/feeling/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java之classpath小见解</title>
     <link href="nthreex.github.io/2017/03/29/Java%E4%B9%8Bclasspath%E5%B0%8F%E8%A7%81%E8%A7%A3/"/>
     <id>nthreex.github.io/2017/03/29/Java之classpath小见解/</id>
     <published>2017-03-29T13:39:01.357Z</published>
-    <updated>2017-03-29T14:11:25.389Z</updated>
+    <updated>2017-03-29T14:33:42.445Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Java-中-classpath-详解"><a href="#Java-中-classpath-详解" class="headerlink" title="Java 中 classpath 详解"></a>Java 中 classpath 详解</h1><ul>
-<li>nthreex</li>
-</ul>
-<blockquote>
-<p>本文绝大部分是参考以下博客</p>
-<p><a href="http://blog.csdn.net/u012179540/article/details/42213945" target="_blank" rel="external">http://blog.csdn.net/u012179540/article/details/42213945</a></p>
-</blockquote>
-<p>正文</p>
-<h2 id="1-从一个简单的HelloWord开始说起，首先我们在JavaTest目录下有Hello-java文件"><a href="#1-从一个简单的HelloWord开始说起，首先我们在JavaTest目录下有Hello-java文件" class="headerlink" title="1.    从一个简单的HelloWord开始说起，首先我们在JavaTest目录下有Hello.java文件"></a>1.    从一个简单的HelloWord开始说起，首先我们在JavaTest目录下有Hello.java文件</h2><pre><code>public class Hello {
-   public static void main(String[] args) {
-             System.out.println(&quot;Hello, Java&quot;);
-   }
-}
-</code></pre><p>当我们设置了指向JDK的bin目录的环境变量时</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH7gpE/PbnpW.png" alt=""></p>
-<h2 id="2-当我们不在JavaTest目录下时编译会成功吗？"><a href="#2-当我们不在JavaTest目录下时编译会成功吗？" class="headerlink" title="2.    当我们不在JavaTest目录下时编译会成功吗？"></a>2.    当我们不在JavaTest目录下时编译会成功吗？</h2><p><img src="http://pic.yupoo.com/nthreex/GkCH7xkv/688Cb.png" alt=""></p>
-<p>显然是不行的，因为Hello.java只在JavaTest目录下，怎么解决？<br>加上路径就行了</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH7C2J/wineA.png" alt=""></p>
-<p>从图中我们可以看出加上路径之后正常编译了，但是为什么加上路径也不能运行Hello.class呢？</p>
-<p>原来，Java对待 .java文件与 .class文件是有区别的。对 .java文件可以直接指定路径给它，而java命令所需的 .class文件不能出现扩展名，也不能指定额外的路径给它。</p>
-<p>那么，如何指定路径呢？对于Java所需要的 .class文件，必须通过classpath来指定。</p>
-<h2 id="3-设置一个变量名为“classpath”-变量值为“D-JavaTest”的环境变量"><a href="#3-设置一个变量名为“classpath”-变量值为“D-JavaTest”的环境变量" class="headerlink" title="3.    设置一个变量名为“classpath”,变量值为“D:\JavaTest”的环境变量"></a>3.    设置一个变量名为“classpath”,变量值为“D:\JavaTest”的环境变量</h2><p><img src="http://pic.yupoo.com/nthreex/GkCH7I7M/2154E.png" alt=""></p>
-<p>然后java Hello</p>
-<p>注意，要使环境变量生效需新打开一个命令行窗口</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH88Y8/NOC90.png" alt=""></p>
-<p>可以看到，由于设置了classpath环境变量，我们在其他目录下也能运行classpath所执行目录下的 .class文件。设置classpath的目的就是告诉JDK，到哪里去寻找.class文件。这种方法一旦设置好，以后每次运行java或javac时，在需要调用.class文件时，JDK都会自动地来到这里寻找。</p>
-<h2 id="4-除了这种设置classpath环境变量的方法之外，还有另一种方法，即在java命令后面加上一个选项classpath，紧跟着不带扩展名的class文件名。"><a href="#4-除了这种设置classpath环境变量的方法之外，还有另一种方法，即在java命令后面加上一个选项classpath，紧跟着不带扩展名的class文件名。" class="headerlink" title="4.    除了这种设置classpath环境变量的方法之外，还有另一种方法，即在java命令后面加上一个选项classpath，紧跟着不带扩展名的class文件名。"></a>4.    除了这种设置classpath环境变量的方法之外，还有另一种方法，即在java命令后面加上一个选项classpath，紧跟着不带扩展名的class文件名。</h2><p>我们把环境变量删除，再新开一个命令行窗口，输入<br>java –classpath d: \JavaTest Hello</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH8ege/SNPpJ.png" alt=""></p>
-<p>正常运行，这是因为JDK遇到这种情况时，先根据命令行中的classpath选项中指定的路径去寻找.class文件，找不到时再到全局的classpath环境变量中去寻找。这种情况下，即使是没有设置全局的classpath环境变量，由于已经在命令行中正确地指定类路径，也可以运行。<br>（JDK 1.5.0 之后可以用”classpath”的缩写”cp”,如 java –cp d:\JavaTest Hello）</p>
-<h2 id="5-我们再来看-java文件使用了其他类的情况。在D-JavaTest中新建一个Person-java文件，内容如下"><a href="#5-我们再来看-java文件使用了其他类的情况。在D-JavaTest中新建一个Person-java文件，内容如下" class="headerlink" title="5.    我们再来看.java文件使用了其他类的情况。在D:\JavaTest中新建一个Person.java文件，内容如下:"></a>5.    我们再来看.java文件使用了其他类的情况。在D:\JavaTest中新建一个Person.java文件，内容如下:</h2><pre><code>public class Person{
+    <content type="html"><![CDATA[<p></p><h1>Java 中 classpath 详解</h1><p></p>
+<p><ul></ul></p>
+<p><li>nthreex</li><br></p>
+<p><blockquote></blockquote></p>
+<p></p><p>本文绝大部分是参考以下博客</p><p></p>
+<p></p><p><a href="http://blog.csdn.net/u012179540/article/details/42213945" target="_blank" rel="external">http://blog.csdn.net/u012179540/article/details/42213945</a></p><br><p></p>
+<p></p><p>正文</p><p></p>
+<h2>1.    从一个简单的HelloWord开始说起，首先我们在JavaTest目录下有Hello.java文件</h2><br><pre><code>public class Hello {<br>   public static void main(String[] args) {<br>            System.out.println(&quot;Hello, Java&quot;);<br>   }<br>}<br></code></pre><br><br><p>当我们设置了指向JDK的bin目录的环境变量时</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH7gpE/PbnpW.png"></p><br><h2>2.    当我们不在JavaTest目录下时编译会成功吗？</h2><br><p><img src="http://pic.yupoo.com/nthreex/GkCH7xkv/688Cb.png"></p><br><p>显然是不行的，因为Hello.java只在JavaTest目录下，怎么解决？<br>加上路径就行了</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH7C2J/wineA.png"></p><br><p>从图中我们可以看出加上路径之后正常编译了，但是为什么加上路径也不能运行Hello.class呢？</p><br><p>原来，Java对待 .java文件与 .class文件是有区别的。对 .java文件可以直接指定路径给它，而java命令所需的 .class文件不能出现扩展名，也不能指定额外的路径给它。</p><br><p>那么，如何指定路径呢？对于Java所需要的 .class文件，必须通过classpath来指定。</p><br><h2>3.    设置一个变量名为“classpath”,变量值为“D:\JavaTest”的环境变量</h2><br><p><img src="http://pic.yupoo.com/nthreex/GkCH7I7M/2154E.png"></p><br><p>然后java Hello</p><br><p>注意，要使环境变量生效需新打开一个命令行窗口</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH88Y8/NOC90.png"></p><br><p>可以看到，由于设置了classpath环境变量，我们在其他目录下也能运行classpath所执行目录下的 .class文件。设置classpath的目的就是告诉JDK，到哪里去寻找.class文件。这种方法一旦设置好，以后每次运行java或javac时，在需要调用.class文件时，JDK都会自动地来到这里寻找。</p><br><h2>4.    除了这种设置classpath环境变量的方法之外，还有另一种方法，即在java命令后面加上一个选项classpath，紧跟着不带扩展名的class文件名。</h2><br><p>我们把环境变量删除，再新开一个命令行窗口，输入<br>java –classpath d: \JavaTest Hello</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8ege/SNPpJ.png"></p><br><p>正常运行，这是因为JDK遇到这种情况时，先根据命令行中的classpath选项中指定的路径去寻找.class文件，找不到时再到全局的classpath环境变量中去寻找。这种情况下，即使是没有设置全局的classpath环境变量，由于已经在命令行中正确地指定类路径，也可以运行。<br>（JDK 1.5.0 之后可以用”classpath”的缩写”cp”,如 java –cp d:\JavaTest Hello）</p><br><h2>5.    我们再来看.java文件使用了其他类的情况。在D:\JavaTest中新建一个Person.java文件，内容如下:</h2><br><pre><code>public class Person{<br><br>    private String name;<br><br>    public Person(String name) {<br>    this.name = name;<br>    }<br><br>    public String getName() {<br>    return name;<br>    }<br><br>}<br></code></pre><br><br><p>然后，修改Hello.java, 内容如下：</p><br><pre><code>public class Hello {<br>    public static void main(String[] args) {<br>        Person person = new Person(&quot;Mike&quot;);<br>        System.out.println(person.getName());<br>    }<br>}<br></code></pre><br><br><p>在命令行输入，javac d:\JavaTest\Hello.java</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8kCg/Z9LE7.png"></p><br><p>这是因为JDK找不到Person类，所以，需要告诉JDK，到哪里去找所用到的类<br>输入<br>Javac –classpath “d:\JavaTest” “d:\JavaTest\Hello.java”<br>(可以不加双引号，双引号不容易出错)</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8ptG/ok7yF.png"></p><br><p>编译通过，JDK在D:\JavaTest文件夹下同时生成了Hello.class及Person.class两个文件。实际上，由于Hello.java使用了Person.java 类，JDK先编译生成了Person.class，然后再编译生成Hello.class。因此，不管Hello.java这个主类使用了多少个其他类，只要编译这个类，JDK就会自动编译其他类，很方便。</p><br><h2>6.    在这一步中，我们将考查Person.java如果放在不同文件夹下面的情况。</h2><br><p>先将D:\JavaTest文件夹下的Person.class文件删除，然后在D:\JavaTest文件夹下新建一个名为Source的文件夹，并将D:\JavaTest文件夹下的Person.java移动到其下面。在命令行输入</p><br><p>javac -classpath &quot;D:\JavaTest\Source&quot; &quot;D:\JavaTest\Hello.java&quot;</p><br><p>编译通过。这时javac命令没有什么不同，只需将classpath改成D:\JavaTest\Source就行了。<br>在命令行输入</p><br><p>java -classpath &quot;D:\JavaTest&quot; Hello</p><br><p>这时由于Java需要找在不同文件夹下的两个.class文件，而命令行中只告诉JDK一个路径，即D:\JavaTest，在此文件夹下，只能找到Hello.class，找不到Person.class文件，因此，错误是可以预料得到的：</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8w0a/ASzFM.png"></p><br><p>果真找不到Person.class。在设置两个以上的classpath时，先将每个路径以双引号引起来，再将这些路径以“;”号隔开，并且每个路径与“;”之间不能带有空格。因此，我们在命令行重新输入：</p><br><p>java -classpath &quot;D:\JavaTest&quot;;&quot;D:\JavaTest\Source&quot; Hello</p><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8Bl7/kiCNI.png"></p><br><p><strong>编译成功。但也暴露出一个问题，如果我们需要用到许多分处于不同文件夹下的类，那这个classpath的设置岂不是很长！有没有办法，对于一个文件夹下的所有.class文件，只指定这个文件夹的classpath，然后让JDK自动搜索此文件夹下面所有相应的路径？有，只要使用package。——找到package的原生态</strong></p><br><h2>7.    package简介。</h2><br><p>Java中引入package的概念，主要是为了解决命名冲突的问题。比如说，在我们的例子中，我们设计了一个很简单的Person 类，如果某人开发了一个类库，其中恰巧也有一个Person类，当我们使用这个类库时，两个Person类出现了命名冲突，JDK不知道我们到底要使用哪个Person类。更有甚者，当我们也开发了一个很庞大的类库，无可避免地，我们的类库中与其他人开发的类库中命名冲突的情况就会越来越多。总不能为了避免自己的类名与其他人开发的类名相同，而让每个编程人员都绞尽脑汁地将一个本应叫Writer的类强行改名为 SarkuyaWriter，MikeWriter, SmithWriter吧？</p><br><p>Sun为解决命名冲突问题，就采取了“眼不见心不烦”的策略：将每个类都归属到一个特定的区域中，在同一个区域中的所有类，都不允许同名；而不同区域的类，由于相互看不到，则允许有同名的类存在。这样，就解决了命名冲突的问题，正如北京的张三与上海的张三毕竟不是同一人。这个区域在Java中就叫package。由于package在Java中非常重要，如果你没有定义自己的package，JDK将会你的类都归到一个默认的无名package中。</p><br><p>package除了有避免命名冲突的问题外，还引申出一个保护当前package下所有类文件的功能，主要通过为类定义几种可视度不同的修饰符来实现：public, protected, private,另外加上一个并不真实存在的friendly类型, 这里就不细说了。</p><br><p>前面说过，package主要是为了解决命名冲突的问题，因此，处在不同的包里面的类根本不用担心与其他包的类名发生冲突，因为JDK在默认情况下只使用本包下面的类，对于其他包，JDK一概视而不见：“眼不见心不烦”。如果要引用其他包的类，就必须通过import来引入其他包中相应的类。只有在这时，JDK才会进行进一步的审查，即根据其他包中的这些类、类属变量及方法的可视度来审查是否符合使用要求。如果此审查通不过，编译就此卡住，直至你放弃使用这些类、类属变量及方法，或者将被引入的类、类属变量及方法的修饰符改为符合要求为止。如果此审查通过，JDK最后进行命名是否冲突的审查。如果发现命名冲突，你可以通过在代码中引用全名的方式来显式地引用相应的类，如使用</p><br><pre><code>java.util.Date = new java.util.Date()<br></code></pre><br><br><p>或是</p><br><pre><code>java.sql.Date = new java.sql.Date()<br></code></pre><br><br><h2>8.    事实上，package的第三大作用是简化classpath的设置</h2><br><p>之前我们有过这样的命令<br>java -classpath &quot;D:\JavaTest&quot;;&quot;D:\JavaTest\Source&quot; Hello</p><br><p>我们必须将所有的.class文件的路径一一告诉JDK，而不管Source其实就是D:/JavaTest的子目录。如果要用到100个不同路径的.class文件，我们就得将classpath设置为一个特别长的字符串，很累。package的引入，很好地解决了这个问题。<strong>package的与classpath相结合，通过import指令为中介，将原来必须由classpath完成的类路径搜索功能，很巧妙地转移到import的身上，从而使classpath的设置简洁明了。</strong>我们先看下面的例子</p><br><p>先将Source子文件夹中的Person.java设置一个Source包。代码修改如下：</p><br><pre><code>package Source;<br><br>public class Person{<br>    private String name;<br><br>    public Person(String name) {<br>        this.name = name;<br>    }<br><br>    public String getName() {<br>        return name;<br>    }<br><br>}<br></code></pre><br><br><p>再在Hello.java中导入Source.Person。代码修改如下:</p><br><pre><code>import Source.Person;<br><br>public class Hello {<br>    public static void main(String[] args) {<br>    Person person = new Person(&quot;Mike&quot;);<br>    System.out.println(person.getName());<br>    }<br>}<br></code></pre><br><br><p>好了，神奇的命令行出现了：</p><br><pre><code>javac -classpath &quot;D:\JavaTest&quot; &quot;D:\JavaTest\Hello.java&quot;<br><br>java -classpath &quot;D:\JavaTest&quot; Hello<br></code></pre><br><br><p><img src="http://pic.yupoo.com/nthreex/GkCH8MCw/FZBHT.png"></p><br><p>尽管这次我们只设置了D:\JavaTest的classpath，但编译及运行居然都通过了！事实上，Java在搜索.class文件时，共有三种方法：</p><br><ol><br><li><br><p>一是全局性的设置，详见第3步，其优点是一次设置，每次使用；</p><br></li><br><li><br><p>二是在每次的javac及java命令行中自行设置classpath，这也是本文使用最多的一种方式，其优点是不加重系统环境变量的负担；</p><br></li><br><li><br><p><strong>三是根据import指令（最重要的）</strong>，将其内容在<strong>后台转换为classpath<strong>。JDK将读取全局的环境变量classpath及命令行中的classpath选项信息，然后</strong>将每条classpath与经过转换为路径形式的import的内容相合并，从而形成最终的classpath——原来javac编译阶段还有这么一个过程：classpath的完备化！</strong> 在我们的例子中，JDK读取全局的环境变量classpath及命令行中的classpath选项信息，得到D:\JavaTest。接着，将import Source.Person中的内容，即Source.Person转换为Source\Person, 然后将D:\JavaTest与其合并，成为D:\JavaTest\Source\Person，这就是我们所需要的Person.class的路径。<strong>在Hello.java中有多少条import语句，就自动进行多少次这样的转换。而我们在命令行中只需告诉JDK最顶层的classpath就行了————多米勒骨牌就此打开</strong>，剩下的则由各个类中的import指令代为操劳了。这种移花接木的作法为我们在命令行中手工地设置classpath提供了极大的便利。</p><br></li><br></ol><br><p>应注意的一点是，import指令是与package配套使用的，只有在某类通过“package pacakgename;”设定了包名后，才能给其他类通过import指令导入。如果import试图导入一个尚未设置包的类，JVM就会报错。</p><br><h2>9.    关于使用JDK类库，及classpath设置。</h2><br><p>JDK类库存放于jre\lib\rt.jar文件中，事实上我们用到JDK类库中的类时，只需要import进来就行了，而不用在编译时显示声明JDK类库的classpath。这是因为rt.jar的classpath路径已经悄悄地在后台设置了，我们不必多此一举手工设置其classpath。</p><br><h2>10.    最后一点需要谈到的是，如果主类恰好也在一个package中(在大型的开发中，其实这才是一种最常见的现象)，那么java命令行的类名前面就必须加上包名。</h2>
 
-       private String name;
 
-    public Person(String name) {
-    this.name = name;
-    }
 
-    public String getName() {
-    return name;
-    }
 
-}
-</code></pre><p>然后，修改Hello.java, 内容如下：</p>
-<pre><code>public class Hello {
-    public static void main(String[] args) {
-        Person person = new Person(&quot;Mike&quot;);   
-        System.out.println(person.getName());
-    }
-}
-</code></pre><p>在命令行输入，javac d:\JavaTest\Hello.java</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH8kCg/Z9LE7.png" alt=""></p>
-<p>这是因为JDK找不到Person类，所以，需要告诉JDK，到哪里去找所用到的类<br>输入<br>Javac –classpath “d:\JavaTest” “d:\JavaTest\Hello.java”<br>(可以不加双引号，双引号不容易出错)</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH8ptG/ok7yF.png" alt=""></p>
-<p>编译通过，JDK在D:\JavaTest文件夹下同时生成了Hello.class及Person.class两个文件。实际上，由于Hello.java使用了Person.java 类，JDK先编译生成了Person.class，然后再编译生成Hello.class。因此，不管Hello.java这个主类使用了多少个其他类，只要编译这个类，JDK就会自动编译其他类，很方便。</p>
-<h2 id="6-在这一步中，我们将考查Person-java如果放在不同文件夹下面的情况。"><a href="#6-在这一步中，我们将考查Person-java如果放在不同文件夹下面的情况。" class="headerlink" title="6.    在这一步中，我们将考查Person.java如果放在不同文件夹下面的情况。"></a>6.    在这一步中，我们将考查Person.java如果放在不同文件夹下面的情况。</h2><p>先将D:\JavaTest文件夹下的Person.class文件删除，然后在D:\JavaTest文件夹下新建一个名为Source的文件夹，并将D:\JavaTest文件夹下的Person.java移动到其下面。在命令行输入</p>
-<p>javac -classpath “D:\JavaTest\Source” “D:\JavaTest\Hello.java”</p>
-<p>编译通过。这时javac命令没有什么不同，只需将classpath改成D:\JavaTest\Source就行了。<br>在命令行输入</p>
-<p>java -classpath “D:\JavaTest” Hello</p>
-<p>这时由于Java需要找在不同文件夹下的两个.class文件，而命令行中只告诉JDK一个路径，即D:\JavaTest，在此文件夹下，只能找到Hello.class，找不到Person.class文件，因此，错误是可以预料得到的：</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH8w0a/ASzFM.png" alt=""></p>
-<p>果真找不到Person.class。在设置两个以上的classpath时，先将每个路径以双引号引起来，再将这些路径以“;”号隔开，并且每个路径与“;”之间不能带有空格。因此，我们在命令行重新输入：</p>
-<p>java -classpath “D:\JavaTest”;”D:\JavaTest\Source” Hello</p>
-<p><img src="http://pic.yupoo.com/nthreex/GkCH8Bl7/kiCNI.png" alt=""></p>
-<p><strong>编译成功。但也暴露出一个问题，如果我们需要用到许多分处于不同文件夹下的类，那这个classpath的设置岂不是很长！有没有办法，对于一个文件夹下的所有.class文件，只指定这个文件夹的classpath，然后让JDK自动搜索此文件夹下面所有相应的路径？有，只要使用package。——找到package的原生态</strong></p>
-<h2 id="7-package简介。"><a href="#7-package简介。" class="headerlink" title="7.    package简介。"></a>7.    package简介。</h2><p>Java中引入package的概念，主要是为了解决命名冲突的问题。比如说，在我们的例子中，我们设计了一个很简单的Person 类，如果某人开发了一个类库，其中恰巧也有一个Person类，当我们使用这个类库时，两个Person类出现了命名冲突，JDK不知道我们到底要使用哪个Person类。更有甚者，当我们也开发了一个很庞大的类库，无可避免地，我们的类库中与其他人开发的类库中命名冲突的情况就会越来越多。总不能为了避免自己的类名与其他人开发的类名相同，而让每个编程人员都绞尽脑汁地将一个本应叫Writer的类强行改名为 SarkuyaWriter，MikeWriter, SmithWriter吧？</p>
-<p>Sun为解决命名冲突问题，就采取了“眼不见心不烦”的策略：将每个类都归属到一个特定的区域中，在同一个区域中的所有类，都不允许同名；而不同区域的类，由于相互看不到，则允许有同名的类存在。这样，就解决了命名冲突的问题，正如北京的张三与上海的张三毕竟不是同一人。这个区域在Java中就叫package。由于package在Java中非常重要，如果你没有定义自己的package，JDK将会你的类都归到一个默认的无名package中。</p>
-<p>package除了有避免命名冲突的问题外，还引申出一个保护当前package下所有类文件的功能，主要通过为类定义几种可视度不同的修饰符来实现：public, protected, private,另外加上一个并不真实存在的friendly类型, 这里就不细说了。</p>
-<p>前面说过，package主要是为了解决命名冲突的问题，因此，处在不同的包里面的类根本不用担心与其他包的类名发生冲突，因为JDK在默认情况下只使用本包下面的类，对于其他包，JDK一概视而不见：“眼不见心不烦”。如果要引用其他包的类，就必须通过import来引入其他包中相应的类。只有在这时，JDK才会进行进一步的审查，即根据其他包中的这些类、类属变量及方法的可视度来审查是否符合使用要求。如果此审查通不过，编译就此卡住，直至你放弃使用这些类、类属变量及方法，或者将被引入的类、类属变量及方法的修饰符改为符合要求为止。如果此审查通过，JDK最后进行命名是否冲突的审查。如果发现命名冲突，你可以通过在代码中引用全名的方式来显式地引用相应的类，如使用</p>
-<pre><code>java.util.Date = new java.util.Date()
-</code></pre><p>或是</p>
-<pre><code>java.sql.Date = new java.sql.Date()
-</code></pre><h2 id="8-事实上，package的第三大作用是简化classpath的设置"><a href="#8-事实上，package的第三大作用是简化classpath的设置" class="headerlink" title="8.    事实上，package的第三大作用是简化classpath的设置"></a>8.    事实上，package的第三大作用是简化classpath的设置</h2><p>之前我们有过这样的命令<br>java -classpath “D:\JavaTest”;”D:\JavaTest\Source” Hello</p>
-<p>我们必须将所有的.class文件的路径一一告诉JDK，而不管Source其实就是D:/JavaTest的子目录。如果要用到100个不同路径的.class文件，我们就得将classpath设置为一个特别长的字符串，很累。package的引入，很好地解决了这个问题。<strong>package的与classpath相结合，通过import指令为中介，将原来必须由classpath完成的类路径搜索功能，很巧妙地转移到import的身上，从而使classpath的设置简洁明了。</strong>我们先看下面的例子</p>
-<p>先将Source子文件夹中的Person.java设置一个Source包。代码修改如下：</p>
-<pre><code>package Source;
 
-public class Person{
-    private String name;
 
-    public Person(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-}
-</code></pre><p>再在Hello.java中导入Source.Person。代码修改如下:</p>
-<pre><code>import Source.Person;
-
-public class Hello {
-    public static void main(String[] args) {
-    Person person = new Person(&quot;Mike&quot;);   
-    System.out.println(person.getName());
-    }
-}
-</code></pre><p>好了，神奇的命令行出现了：</p>
-<pre><code>javac -classpath &quot;D:\JavaTest&quot; &quot;D:\JavaTest\Hello.java&quot;
-
-java -classpath &quot;D:\JavaTest&quot; Hello
-</code></pre><p><img src="http://pic.yupoo.com/nthreex/GkCH8MCw/FZBHT.png" alt=""></p>
-<p>尽管这次我们只设置了D:\JavaTest的classpath，但编译及运行居然都通过了！事实上，Java在搜索.class文件时，共有三种方法：</p>
-<ol>
-<li><p>一是全局性的设置，详见第3步，其优点是一次设置，每次使用；</p>
-</li>
-<li><p>二是在每次的javac及java命令行中自行设置classpath，这也是本文使用最多的一种方式，其优点是不加重系统环境变量的负担；</p>
-</li>
-<li><p><strong>三是根据import指令（最重要的）</strong>，将其内容在<strong>后台转换为classpath</strong>。JDK将读取全局的环境变量classpath及命令行中的classpath选项信息，然后<strong>将每条classpath与经过转换为路径形式的import的内容相合并，从而形成最终的classpath——原来javac编译阶段还有这么一个过程：classpath的完备化！</strong> 在我们的例子中，JDK读取全局的环境变量classpath及命令行中的classpath选项信息，得到D:\JavaTest。接着，将import Source.Person中的内容，即Source.Person转换为Source\Person, 然后将D:\JavaTest与其合并，成为D:\JavaTest\Source\Person，这就是我们所需要的Person.class的路径。在<strong>Hello.java中有多少条import语句，就自动进行多少次这样的转换。而我们在命令行中只需告诉JDK最顶层的classpath就行了————多米勒骨牌就此打开</strong>，剩下的则由各个类中的import指令代为操劳了。这种移花接木的作法为我们在命令行中手工地设置classpath提供了极大的便利。</p>
-</li>
-</ol>
-<p>应注意的一点是，import指令是与package配套使用的，只有在某类通过“package pacakgename;”设定了包名后，才能给其他类通过import指令导入。如果import试图导入一个尚未设置包的类，JVM就会报错。</p>
-<h2 id="9-关于使用JDK类库，及classpath设置。"><a href="#9-关于使用JDK类库，及classpath设置。" class="headerlink" title="9.    关于使用JDK类库，及classpath设置。"></a>9.    关于使用JDK类库，及classpath设置。</h2><p>JDK类库存放于jre\lib\rt.jar文件中，事实上我们用到JDK类库中的类时，只需要import进来就行了，而不用在编译时显示声明JDK类库的classpath。这是因为rt.jar的classpath路径已经悄悄地在后台设置了，我们不必多此一举手工设置其classpath。</p>
-<h2 id="10-最后一点需要谈到的是，如果主类恰好也在一个package中-在大型的开发中，其实这才是一种最常见的现象-，那么java命令行的类名前面就必须加上包名。"><a href="#10-最后一点需要谈到的是，如果主类恰好也在一个package中-在大型的开发中，其实这才是一种最常见的现象-，那么java命令行的类名前面就必须加上包名。" class="headerlink" title="10.    最后一点需要谈到的是，如果主类恰好也在一个package中(在大型的开发中，其实这才是一种最常见的现象)，那么java命令行的类名前面就必须加上包名。"></a>10.    最后一点需要谈到的是，如果主类恰好也在一个package中(在大型的开发中，其实这才是一种最常见的现象)，那么java命令行的类名前面就必须加上包名。</h2>]]></content>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Java-中-classpath-详解&quot;&gt;&lt;a href=&quot;#Java-中-classpath-详解&quot; class=&quot;headerlink&quot; title=&quot;Java 中 classpath 详解&quot;&gt;&lt;/a&gt;Java 中 classpath 详解&lt;/h1&gt;&lt;ul&gt;
-
+      &lt;p&gt;&lt;/p&gt;&lt;h1&gt;Java 中 classpath 详解&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ul&gt;&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;nthreex&lt;/li&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote&gt;&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;本文绝大部分是参考
     
     </summary>
     
