@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="nthreex.github.io/"/>
-  <updated>2017-04-01T08:48:49.693Z</updated>
+  <updated>2017-04-11T10:00:01.498Z</updated>
   <id>nthreex.github.io/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java--private构造函数</title>
+    <link href="nthreex.github.io/2017/04/11/java-private%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    <id>nthreex.github.io/2017/04/11/java-private构造函数/</id>
+    <published>2017-04-11T09:54:26.370Z</published>
+    <updated>2017-04-11T10:00:01.498Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？"><a href="#为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？" class="headerlink" title="为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？"></a>为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？</h1><blockquote>
+<p>nthreex</p>
+</blockquote>
+<p>   与我们常见的不同，在Java中有些类的构造函数是被声明为private或者protected的。当声明为protected时，只有同一个包内的类能调用构造函数来生成对象，而声明为private时，则更是只有类内部才可以生成对象。</p>
+<pre><code>            | Class | Package | Subclass | Subclass | World
+            |       |         |(same pkg)|(diff pkg)| 
+————————————+———————+—————————+——————————+——————————+————————
+public      |   +   |    +    |    +     |     +    |   +     
+————————————+———————+—————————+——————————+——————————+————————
+protected   |   +   |    +    |    +     |     +    |   o     
+————————————+———————+—————————+——————————+——————————+————————
+no modifier |   +   |    +    |    +     |     o    |   o
+————————————+———————+—————————+——————————+——————————+————————
+private     |   +   |    o    |    o     |     o    |   o
+
++ : accessible
+o : not accessible
+</code></pre><p>那么这么做的目的是什么？我们用两个源码来进行说明</p>
+<hr>
+<h2 id="1-Runtime类"><a href="#1-Runtime类" class="headerlink" title="1. Runtime类"></a>1. Runtime类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Runtime</span> </span>&#123;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">static</span> Runtime currentRuntime = <span class="keyword">new</span> Runtime();</span><br><span class="line"></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Runtime <span class="title">getRuntime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> currentRuntime;</span><br><span class="line">      &#125;</span><br><span class="line">  </span><br><span class="line">      <span class="comment">/** Don't let anyone else instantiate this class */</span></span><br><span class="line">      <span class="function"><span class="keyword">private</span> <span class="title">Runtime</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这个类的设计思想也就是单例模式思想。在这种思想模式下，类被创建后，只可能产生一个实例供外部访问，并且提供一个全局的访问点。</p>
+<p>核心知识点如下：</p>
+<ul>
+<li>(1) 将采用单例设计模式的类的构造方法私有化（采用private修饰）。</li>
+<li>(2) 在其内部产生该类的实例化对象，并将其封装成private static类型。</li>
+<li>(3) 定义一个静态方法返回该类的实例。</li>
+</ul>
+<hr>
+<p>单例模式是一种比较常见的设计模式，它到底能带给我们什么好处呢?其实无非是三个方面的作用：</p>
+<ul>
+<li>第一、控制资源的使用，通过线程同步来控制资源的并发访问；</li>
+<li>第二、控制实例产生的数量，达到节约资源的目的。</li>
+<li>第三、作为通信媒介使用，也就是数据共享，它可以在不建立直接关联的条件下，让多个不相关的两个线程或者进程之间实现通信。</li>
+</ul>
+<p>比如，数据库连接池的设计一般采用单例模式，数据库连接是一种数据库资源。软件系统中使用数据库连接池，主要是节省打开或者关闭数据库连接所引起的效率损耗，这种效率上的损耗还是非常昂贵的。当然，使用数据库连接池还有很多其它的好处，可以屏蔽不同数据数据库之间的差异，实现系统对数据库的低度耦合，也可以被多个系统同时使用，具有高可复用性，还能方便对数据库连接的管理等等。数据库连接池属于重量级资源，一个应用中只需要保留一份即可，既节省了资源又方便管理。所以数据库连接池采用单例模式进行设计会是一个非常好的选择。</p>
+<p>在我们日常使用的在Windows中也有不少单例模式设计的组件，象常用的文件管理器。由于Windows操作系统是一个典型的多进程多线程系统，那么在创建或者删除某个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象。采用单例模式设计的文件管理器就可以完美的解决这个问题，所有的文件操作都必须通过唯一的实例进行，这样就不会产生混乱的现象。</p>
+<p>再比如，每台计算机可以有若干个打印机，如果每一个进程或者线程都独立地使用打印机资源的话，那么我们打印出来的结果就有可能既包含这个打印任务的一部分，又包含另外一个打印任务的一部分。所以，大多数的操作系统最终为打印任务设计了一个单例模式的假脱机服务Printer Spooler，所有的打印任务都需要通过假脱机服务进行。</p>
+<hr>
+<h2 id="2-System类"><a href="#2-System类" class="headerlink" title="2. System类"></a>2. System类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">System</span> </span>&#123;</span><br><span class="line">     ...</span><br><span class="line">     <span class="comment">/** Don't let anyone instantiate this class */</span></span><br><span class="line">     <span class="function"><span class="keyword">private</span> <span class="title">System</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     &#125;</span><br><span class="line">     ...</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>这个类与Runtime类不一样，这个类连类的内部也没有该类的实例化对象，那么这又是为什么？<br>答案很简单，因为这个类的设计者把所有你需要的功能放在静态方法和变量中了，所以也就没有实例化对象的必要。</p>
+<blockquote>
+<p>参考文章</p>
+<p><a href="http://stackoverflow.com/questions/215497/in-java-difference-between-default-public-protected-and-private" target="_blank" rel="external">http://stackoverflow.com/questions/215497/in-java-difference-between-default-public-protected-and-private</a><br><a href="http://www.cnblogs.com/yinxiaoqiexuxing/p/5605338.html" target="_blank" rel="external">http://www.cnblogs.com/yinxiaoqiexuxing/p/5605338.html</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？&quot;&gt;&lt;a href=&quot;#为什么有的类将构造函数声明为private或者protected？这是一种什么用法？有什么作用？&quot; class=&quot;headerlink&quot; tit
+    
+    </summary>
+    
+      <category term="java" scheme="nthreex.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="nthreex.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>Make a choice</title>
